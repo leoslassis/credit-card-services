@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "2a025dcb-634a-402a-b166-9a1e08571002",
+		"name": "Challenge-Itau",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Transações",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1, \n\t\"userPaymentMethodId\":2, \n\t\"userId\":3, \n\t\"date\":\"2020-05-04\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rs/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rs",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar transações entre datas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/rs/credit-card/transaction;userId=321;initialDate=2020-05-03;finalDate=2020-05-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"rs",
+						"credit-card",
+						"transaction;userId=321;initialDate=2020-05-03;finalDate=2020-05-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Transações do dia",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/rs/credit-card/transaction;date=2020-05-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"rs",
+						"credit-card",
+						"transaction;date=2020-05-02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar transações do usuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/rs/credit-card/transaction;userId=214124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"rs",
+						"credit-card",
+						"transaction;userId=214124"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar transações do meio de pagamento do usuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/rs/credit-card/transaction;userId=214124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"rs",
+						"credit-card",
+						"transaction;userId=214124"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar transação por Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/rs/credit-card/transaction;userId=214124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"rs",
+						"credit-card",
+						"transaction;userId=214124"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
